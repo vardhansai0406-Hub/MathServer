@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Fuel Efficiency</title>
+    </head>
+    <style>
+        .box
+        {
+            margin-top: 20%;
+            margin-left: 25%;
+            margin-right:25%;
+            border: px solid rgb(0, 255, 191); 
+            background-color: rgb(34, 0, 255);
+            text-align: center; 
+        }
+    </style>
+    <body>
+        <div class="box">
+        <h1>Fuel Efficiency Calculator</h1>
+        <h3>VARDHANSAI I </h3>
+        <h3>25015695</h3>
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            <br>
+            <label>Distance Travelled: </label>
+            <input type="text" name="distance" value="{{d}}" required> Km
+            <br>
+            \<br>
+            <label>Fuel Consumed: </label>
+            <input type="text" name="fuel" value="{{f}}" required> L
+            <br>
+            <br>
+            <input type="submit" value="Calculate">
+            <br>
+            <br>
+            <label>Fuel Efficiency: </label>
+            <input type="text" name="mileage" value="{{mileage}}"> Km/L
+            <br>
+        </form>
+        </div>
+    </body>
+</html>
